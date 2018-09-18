@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour{
     {
         if (gameHasEnded == false) {
             gameHasEnded = true;
-            Debug.Log("Game over");
             Invoke("Restart", restartDelay);
         }
     }

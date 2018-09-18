@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour {
 
@@ -7,6 +8,12 @@ public class FollowPlayer : MonoBehaviour {
 	
     // Update is called once per frame
 	void Update () {
-        transform.position = player.position + offset;
+        try
+        {
+            transform.position = player.position + offset;
+        }
+        catch (InvalidCastException e) {
+
+        }
 	}
 }
